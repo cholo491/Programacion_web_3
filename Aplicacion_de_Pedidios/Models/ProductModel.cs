@@ -1,9 +1,11 @@
 namespace Aplicacion_de_Pedidios.Models
 {
-    public class ErrorViewModel
+    public class ProductModel
     {
-        public string? RequestId { get; set; }
-
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public decimal Precio { get; set; }
+        public int Stock { get; set; }
     }
 }

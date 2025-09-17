@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aplicacion_de_Pedidios.Controllers
 {
-    public class HomeController : Controller
+    public class UserController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public UserController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }

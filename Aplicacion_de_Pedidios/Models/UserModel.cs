@@ -1,9 +1,12 @@
 namespace Aplicacion_de_Pedidios.Models
 {
-    public class ErrorViewModel
+    public class UserModel
     {
-        public string? RequestId { get; set; }
-
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Rol { get; set; } 
     }
+    
 }
