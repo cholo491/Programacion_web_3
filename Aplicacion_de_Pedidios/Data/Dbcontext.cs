@@ -27,7 +27,7 @@ namespace Aplicacion_de_Pedidios.Data
             //un order item pertenece a un solo producto pero un producto puede tener muchos order items
             .HasOne<Models.OrderItemModel>()
             .WithMany()
-            .HasForeignKey(oi => oi.ProductId);
+            .HasForeignKey(oi => oi.ProductId);     
         }
     }
 }

@@ -1,15 +1,14 @@
 ﻿namespace Aplicacion_de_Pedidios.Validaciones
 {
-    public class AutentificacionYautorizacionUser
+    public class ValidarStock
     {
-        public static bool Validar(string role)
+       public static bool Validar(int stock)
         {
-            if (role != "Admin" && role != "User")
+            if (stock < 0)
             {
                 return false;
             }
             return true;
         }
-
     }
 }
