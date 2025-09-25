@@ -8,14 +8,19 @@ namespace PrimerParcial.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Name { get; set; } // Ejemplo: "Postres", "Platos Principales"
+        [StringLength(100)]
+        public string Name { get; set; } 
 
-        public string Description { get; set; }
+        [Required]
+        public string Instructions { get; set; } // Pasos para preparar la receta
 
         // --- Relaciones de Entity Framework Core ---
 
-        // Propiedad de Navegación: El lado 'muchos' para las Recetas en esta Categoría
-        public ICollection<Recipe> Recipes { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public Category Category { get; set; }
+
+        public ICollection<Ingredient> Ingredients { get; set; }
     }
 }

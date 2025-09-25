@@ -16,7 +16,7 @@ namespace PrimerParcial.Models
         // --- Relaciones de Entity Framework Core ---
 
         // Propiedad de Navegación: El lado 'muchos' para las Recetas en esta Categoría
-        
+        public ICollection<Recipe> Recipes { get; set; }
 
     }
 }
