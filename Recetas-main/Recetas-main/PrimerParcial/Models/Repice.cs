@@ -1,20 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PrimerParcial.Models
 {
     public class Recipe
     {
-        internal DateTime DateCreated;
-
-        // Clave Primaria (PK)
         public int Id { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; } 
+        public string Title { get; set; }
 
         [Required]
-        public string Instructions { get; set; } // Pasos para preparar la receta
+        public string Description { get; set; }
+
+        public int Servings { get; set; }
+
+        public int PreparationTimeMinutes { get; set; }
+
+        [Required]
+        public string Instructions { get; set; } 
+
+        public DateTime DateCreated { get; set; }
 
         // --- Relaciones de Entity Framework Core ---
 
