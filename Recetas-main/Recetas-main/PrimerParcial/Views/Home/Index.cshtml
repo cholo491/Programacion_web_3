@@ -1,8 +1,55 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-4">
+    <div class="text-center mb-4">
+        <h1 class="display-5">Recetas - Panel Principal</h1>
+        <p class="text-muted">Navega a las secciones principales de la aplicación</p>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Recetas</h5>
+                    <p class="card-text flex-grow-1">Ver, crear, editar y eliminar recetas.</p>
+                    <div class="d-grid gap-2">
+                        <a asp-controller="Recipes" asp-action="Index" class="btn btn-primary">Ver Recetas</a>
+                        <a asp-controller="Recipes" asp-action="Create" class="btn btn-outline-primary">Crear Receta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Categorías</h5>
+                    <p class="card-text flex-grow-1">Gestiona las categorías de recetas.</p>
+                    <div class="d-grid gap-2">
+                        <a asp-controller="Categories" asp-action="Index" class="btn btn-success">Ver Categorías</a>
+                        <a asp-controller="Categories" asp-action="Create" class="btn btn-outline-success">Crear Categoría</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Ingredientes</h5>
+                    <p class="card-text flex-grow-1">Administra los ingredientes disponibles.</p>
+                    <div class="d-grid gap-2">
+                        <a asp-controller="Ingredients" asp-action="Index" class="btn btn-warning text-white">Ver Ingredientes</a>
+                        <a asp-controller="Ingredients" asp-action="Create" class="btn btn-outline-warning">Crear Ingrediente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="Home" asp-action="Privacy" class="link-secondary">Política de privacidad</a>
+    </div>
 </div>
