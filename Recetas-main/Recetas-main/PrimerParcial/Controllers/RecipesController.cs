@@ -81,7 +81,6 @@ namespace PrimerParcial.Controllers
             return View(recipe);
         }
 
-        // POST: Recipes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,PreparationTimeMinutes,Servings,Instructions,CategoryId")] Recipe recipe)
@@ -115,7 +114,6 @@ namespace PrimerParcial.Controllers
             return View(recipe);
         }
 
-        // GET: Recipes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
