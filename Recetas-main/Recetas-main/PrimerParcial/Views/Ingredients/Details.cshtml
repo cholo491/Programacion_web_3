@@ -1,0 +1,18 @@
+@model PrimerParcial.Models.Ingredient
+@{
+    ViewData["Title"] = "Ingredient Details";
+}
+<h1>Ingredient Details</h1>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">Name</dt>
+    <dd class="col-sm-9">@Model.Name</dd>
+    <dt class="col-sm-3">Quantity</dt>
+    <dd class="col-sm-9">@Model.Quantity</dd>
+    <dt class="col-sm-3">Recipe</dt>
+    <dd class="col-sm-9">@Model.Recipe?.Title</dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
