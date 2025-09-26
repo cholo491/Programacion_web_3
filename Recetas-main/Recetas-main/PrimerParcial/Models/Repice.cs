@@ -4,6 +4,8 @@ namespace PrimerParcial.Models
 {
     public class Recipe
     {
+        internal DateTime DateCreated;
+
         // Clave Primaria (PK)
         public int Id { get; set; }
 
