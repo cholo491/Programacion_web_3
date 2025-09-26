@@ -1,0 +1,41 @@
+@model PrimerParcial.Models.Recipe
+@{
+    ViewData["Title"] = "Recipe Details";
+}
+<h1>Recipe Details</h1>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">Title</dt>
+    <dd class="col-sm-9">@Model.Title</dd>
+    <dt class="col-sm-3">Category</dt>
+    <dd class="col-sm-9">@Model.Category?.Name</dd>
+    <dt class="col-sm-3">Servings</dt>
+    <dd class="col-sm-9">@Model.Servings</dd>
+    <dt class="col-sm-3">Preparation Time (min)</dt>
+    <dd class="col-sm-9">@Model.PreparationTimeMinutes</dd>
+    <dt class="col-sm-3">Description</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+    <dt class="col-sm-3">Instructions</dt>
+    <dd class="col-sm-9 white-space-prewrap">@Model.Instructions</dd>
+</dl>
+<h4>Ingredients</h4>
+@if (Model.Ingredients != null && Model.Ingredients.Any())
+{
+    <ul>
+    @foreach (var ing in Model.Ingredients)
+    {
+        <li>@ing.Quantity - @ing.Name</li>
+    }
+    </ul>
+}
+else
+{
+    <p>No ingredients.</p>
+}
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
+<style>
+.white-space-prewrap { white-space: pre-wrap; }
+</style>
